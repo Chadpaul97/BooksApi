@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container"> <!-- Beginning of Container -->
-        <h1>All Books</h1>
+        <h1>One Books</h1>
 		<table  class="table table-dark">
 		    <thead>
 		        <tr>
@@ -31,24 +31,20 @@
 		            <th scope="col">Description</th>
 		            <th scope="col">Language</th>
 		            <th scope="col">Number of Pages</th>
-		            <th scope="col">Actions</th>
 		        </tr>
 		    </thead>
 		    <tbody>
 		    
-		    	<c:forEach var = "i" items = "${books}" >
+		    	
 		    		<tr>
-		    			<td> <c:out value="${i.id}"></c:out></td>
-		    			<td> <c:out value="${i.title}"></c:out></td>
-		    			<td> <c:out value="${i.description}"></c:out></td>
-		    			<td> <c:out value="${i.language}"></c:out></td>
-		    			<td> <c:out value="${i.numberOfPages}"></c:out></td>
-		    			<td> <a href="/books/${i.id}" >Show </a> || <a href="" > Edit </a> || <a href="/delete/${i.id}" > Delete </a></td>
+		    			<td> <c:out value="${book.id}"></c:out></td>
+		    			<td> <c:out value="${book.title}"></c:out></td>
+		    			<td> <c:out value="${book.description}"></c:out></td>
+		    			<td> <c:out value="${book.language}"></c:out></td>
+		    			<td> <c:out value="${book.numberOfPages}"></c:out></td>
 		    		</tr>
 		    	
 		    	
-		    	
-		    	</c:forEach>
 		         <!-- loop over all the books to show the details as in the wireframe! -->
 		    </tbody>
 		</table>
